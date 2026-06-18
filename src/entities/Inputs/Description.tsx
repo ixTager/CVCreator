@@ -7,16 +7,14 @@ const Description = () =>{
     const {description, setDescription} = FCDescription();
 
     return(
-        <div>
             <input
             type="text"
             placeholder="Desctiption"
             value={description}
             onChange={(e)=>setDescription(CVStore.description = e.target.value)}
-            className="w-[73%] h-[4%] my-[15px]"
+            maxLength={200}
             required
             />
-        </div>
     );
 }
 export default observer(Description);

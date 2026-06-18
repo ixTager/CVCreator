@@ -7,16 +7,14 @@ const Title = () =>{
     const {title, setTitle} = FCTitlte();
 
     return(
-        <div className="flex">
-            <input
+        <input
             type="text"
-            placeholder="Title"
+            placeholder="Name of file"
             value={title}
             onChange={(e)=>setTitle(CVStore.title = e.target.value)}
-            className="w-[73%] h-[4%]"
+            maxLength={20}
             required
-            />
-        </div>
+        />
     )
 }
 export default observer(Title);

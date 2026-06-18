@@ -4,7 +4,7 @@ import '../shared/styles/Btn.css';
 
 const Switch = observer(() => {
     return (
-        <div className="flex justify-between w-[73%]">
+        <div className="flex justify-between">
             <button
                 onClick={() => CVStore.prevID()}
                 className="btn-id" 

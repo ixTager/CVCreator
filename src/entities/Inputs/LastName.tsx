@@ -7,15 +7,14 @@ const LastName = () =>{
     const {lastName, setLastName} = FCLastName();
 
     return (
-        <div>
-            <input
+        <input
             type="text"
             placeholder="Last Name"
             value={lastName}
             onChange={(e)=>setLastName(CVStore.lastName = e.target.value )}
-            className="w-[73%] h-[4%]"
-            required/>
-        </div>
+            maxLength={20}
+            required
+        />
     );
 }
 export default observer(LastName);

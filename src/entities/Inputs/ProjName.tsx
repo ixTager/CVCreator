@@ -6,7 +6,7 @@ const ProjName = () =>{
     return(
         <input
         type="text"
-        className="w-[73%] h-[4%] mb-3"
+        className="mb-3"
         value={CVStore.proj[CVStore.id_proj]?.[0] || ''}
         onChange={(e)=>CVStore.proj[CVStore.id_proj][0] = e.target.value}
         placeholder="Project Name"

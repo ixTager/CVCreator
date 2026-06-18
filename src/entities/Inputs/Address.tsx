@@ -7,16 +7,14 @@ const Address = () =>{
     const {address, setAddress} = FCAddress();
 
     return(
-        <div>
-            <input
+        <input
             type="text"
-            placeholder="YourAddress"
+            placeholder="Your Address"
             value={address}
             onChange={(e) => setAddress(CVStore.address = e.target.value)}
-            className="w-[73%] h-[4%]"
+            maxLength={40}
             required
-            />
-        </div>
+        />
     );
 }
 export default observer(Address);

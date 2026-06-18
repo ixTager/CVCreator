@@ -11,8 +11,8 @@ const AddInfo = () =>{
         type="text"
         value={addInfo}
         onChange={(e)=>setAddInfo(CVStore.inform = e.target.value)}
-        className="w-[73%] h-[4%] mb-5"
-        placeholder="Addition information"/>
+        placeholder="Addition information"
+        maxLength={150}/>
     );
 }
 export default observer(AddInfo);

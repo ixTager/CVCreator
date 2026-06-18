@@ -9,10 +9,10 @@ const Birth = () =>{
     return(
         <input
         type="text"
-        value={birth }
+        value={birth}
         onChange={(e)=>setBirth(CVStore.birth = e.target.value)}
         placeholder="Birth"
-        className="h-[4%] w-[73%] mb-[15px]"
+        maxLength={10}
         required/>
     );
 }

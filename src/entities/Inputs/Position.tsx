@@ -13,7 +13,6 @@ const Position = observer(() => {
                 value={CVStore.experience[CVStore.id]?.[0] || ""}
                 placeholder="Position"
                 onChange={handlePosition}
-                className="h-[4%] w-[73%]"
             />
     );
 });

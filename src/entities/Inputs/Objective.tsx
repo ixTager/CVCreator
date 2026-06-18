@@ -9,10 +9,10 @@ const Objective = () =>{
     return(
         <input
         type="text"
-        className="w-[73%] h-[4%] mb-[15px]"
         value={objective}
         onChange={(e)=>setObjective(CVStore.objective = e.target.value)}
         placeholder="Objective"
+        maxLength={400}
         required/>
     );
 }

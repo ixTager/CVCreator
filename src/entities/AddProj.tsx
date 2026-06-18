@@ -11,7 +11,7 @@ const AddProj = () =>{
         <div>
             {CVStore.showed?
             (
-                <div className="flex flex-col px-[5.188rem] py-5">
+                <div className="flex flex-col py-5">
                     <span>Number: {CVStore.id_proj}</span>
                     <div className="flex flex-col">
                         <ProjName />
@@ -22,7 +22,7 @@ const AddProj = () =>{
             )
             :
             (
-                <div className="flex pl-[5.188rem] pt-5 items-center">
+                <div className="flex pt-5 items-center">
                     <button
                     onClick={()=>CVStore.setShowedProj()}
                     className="btn-id">Add proj</button>

@@ -11,8 +11,8 @@ const AddExp = observer(() => {
     return (
         <div>
             {show ? (
-                <div className="flex flex-col px-[5.188rem]">
-                    <span className="my-2">Number: {CVStore.id}</span>
+                <div className="flex flex-col py-5">
+                    <span>Number: {CVStore.id}</span>
                     <div className="flex flex-col">
                         <Position />
                         <Describe />
@@ -20,11 +20,10 @@ const AddExp = observer(() => {
                     </div>
                 </div>
             ) : (
-                <div className="flex pl-[5.188rem] pt-5 items-center">
+                <div className="flex pt-5 items-center">
                     <button
                     onClick={() => setShow(true)}
-                    className="btn-id"
-                    >Add</button>
+                    className="btn-id">Add</button>
                 </div>
             )}
         </div>

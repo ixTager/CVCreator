@@ -15,10 +15,10 @@ import AddInfo from "../entities/Inputs/AddInfo";
 
 export default function Inputs(){
     return(
-        <div className="flex flex-col w-[50vw] h-screen py-5">
-            <p className="text-3xl font-medium text-center mb-[2.625rem]">СV Creator</p>
-            <div className="px-[5.188rem]">
-                <p className="text-2xl mb-5">Personal information</p>
+        <div className="flex flex-col w-1/2 h-full py-5 px-8">
+            <p className="text-3xl font-medium mb-[2.625rem] max-sm:text-2xl">СV Creator</p>
+            <div className="flex flex-col w-6/7 gap-y-2">
+                <p className="text-2xl mb-5 max-sm:text-xl">Personal information</p>
                 <Title />
                 <FirstName />
                 <LastName />
@@ -31,11 +31,13 @@ export default function Inputs(){
                 <Objective />
                 <AddInfo />
                 <Skills />
-                <p className="text-2xl mt-10">Work Experience</p>
             </div>
+            <div className="flex flex-col justify-center">
+                <p className="text-xl font-medium max-sm:text-lg">Work Experience</p>
                 <AddExp />
-                <p className="text-2xl mt-10 px-[5.188rem]">Projects</p>
+                <p className="text-xl font-medium max-sm:text-lg">Projects</p>
                 <AddProj />
+            </div>
         </div>
     );
 }

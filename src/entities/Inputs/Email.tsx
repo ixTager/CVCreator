@@ -7,16 +7,14 @@ const Email = () => {
     const { email, setEmail } = FCEmail(); 
 
     return (
-        <div>
-            <input
+        <input
                 type="email"
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(CVStore.email = e.target.value)}
-                className="w-[73%] h-[4%] my-[15px]"
+                maxLength={20}
                 required
-            />
-        </div>
+        />
     );
 };
 
