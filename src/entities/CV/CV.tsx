@@ -20,7 +20,7 @@ const CV = () => {
 
 
     return(
-        <div ref={contentRef} className="w-[50vw] h-screen flex bg-white text-black px-5">
+        <div ref={contentRef} className="w-1/2 h-full flex bg-white text-black px-5">
             <div className="flex flex-col gap-3 border-r pr-3 w-1/4">
                 {imageURL != ""?
                 (
@@ -43,13 +43,13 @@ const CV = () => {
                 )
                 }
 
-                <p className="font-medium text-xl mb-3 text-wrap max-sm:text-lg">Personal infomation</p>
-                <p className="font-medium text-lg max-sm:text-base">Name</p>
+                <p className="font-medium text-xl mb-3 text-wrap max-lg:text-lg">Personal infomation</p>
+                <p className="font-medium text-lg max-lg:text-base">Name</p>
                 <p className="font-sans mb-2">
                     {CVStore.firstName} {CVStore.lastName}
                 </p>
 
-                <p className="font-medium text-lg max-sm:text-base">Address</p>
+                <p className="font-medium text-lg max-lg:text-base">Address</p>
                 <p className="font-sans mb-2">
                     {CVStore.address}
                 </p>
@@ -61,7 +61,7 @@ const CV = () => {
                 <p className="font-sans mb-2">{CVStore.birth}</p>
 
 
-                <p className="font-medium text-lg">Email</p>
+                <p className="font-medium text-lg max-sm:text-base">Email</p>
                 <p className="font-sans">{CVStore.email}</p>
 
                 <div className="flex mt-auto">
@@ -74,13 +74,15 @@ const CV = () => {
 
             </div>
 
-            <div className="flex flex-col pl-5 w-full py-5">
-                <p className="font-medium text-lg max-sm:text-base">{CVStore.firstName} {CVStore.lastName}</p>
-                <p className="font-sans">{CVStore.description}</p>
+            <div className="flex flex-col pl-5 w-full py-5 ">
+                <div className="text-lg wrap-break-word">
+                    <p className="font-medium text-lg max-sm:text-base">{CVStore.firstName} {CVStore.lastName}</p>
+                    <p className="font-sans text-lg">{CVStore.description}</p>
+                </div>
 
                 <hr className="my-3"/>
 
-                <p className="font-medium text-lg mb-2">Work Experience</p>
+                <p className="font-medium text-lg mb-2 max-lg:text-base">Work Experience</p>
 
                 {Object.keys(CVStore.experience).map((id)=>{
                     const el = CVStore.experience[id];
@@ -88,7 +90,7 @@ const CV = () => {
                         return(
                             <div key={id}>
                                 <span className="font-medium">{id}. </span>
-                                <span className="font-bold text-pretty max-lg:text-balance">{el[0]}</span>
+                                <span className="font-bold text-pretty">{el[0]}</span>
                                 <p className="mb-5 font-sans text-pretty max-lg:text-balance">{el[1]}</p>
                             </div>
                         );
