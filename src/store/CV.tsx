@@ -72,6 +72,9 @@ class Store {
     setShowedProj(){
         this.showed = true;
     }
+    setCloseProj(){
+        this.showed = false;
+    }
 
 }
 const CVStore = new Store();
